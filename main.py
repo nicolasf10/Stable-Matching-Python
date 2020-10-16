@@ -18,11 +18,7 @@ preferred_rankings_women = {
 tentative_engagements = []
 
 # Free men
-free_men = []
-
-def init_free_men():
-    for man in iter(preferred_rankings_men):
-        free_men.append(man)
+free_men = [guy for guy in preferred_rankings_men]
 
 def stable_matching():
     while len(free_men) > 0:
@@ -59,7 +55,6 @@ def begin_matching(man):
                 taken_match[0][0] = man
                 break
 
-init_free_men()
 stable_matching()
 print('FINAL MATCHES:')
 print(tentative_engagements)
