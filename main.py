@@ -33,7 +33,7 @@ def begin_matching(man):
         if (len(taken_match) == 0):
             tentative_engagements.append([man, woman])
             free_men.remove(man)
-            print('%s is no longer a free man and is not tentatively engaged to %s'%(man, woman))
+            print('%s is no longer a free man and is now tentatively engaged to %s'%(man, woman))
             break
         elif len(taken_match) > 0:
             print('%s is taken'%(woman))
